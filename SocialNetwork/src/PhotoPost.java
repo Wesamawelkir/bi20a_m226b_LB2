@@ -22,14 +22,12 @@ public class PhotoPost extends Post {
 	 * @param filename
 	 * @param caption
 	 */
-	public PhotoPost(String author, String filename, String caption) {
+	public PhotoPost(String username, long timestamp, int likes,ArrayList<String> comments,String filename, String caption) {
 		
-		username= author;
+		super();
 		this.filename = filename;
 		this.caption = caption;
-		timestamp = System.currentTimeMillis();
-		likes = 0;
-		comments = new ArrayList<>();
+
 	}
 	
 
@@ -38,8 +36,6 @@ public class PhotoPost extends Post {
 	public String getImageFile() {
 		return filename;
 	}
-	
-	
 	public String getCaption() {
 		return caption;
 	}
@@ -48,7 +44,14 @@ public class PhotoPost extends Post {
 	 * Simulate display for the time being
 	 */
 
+	void Post() {
 
+		super.display();
+		System.out.println("FileName " + "{" + filename + "}");
+		System.out.println("Caption " + caption);
+
+
+	}
 
 }
 

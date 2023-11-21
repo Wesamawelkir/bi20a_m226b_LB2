@@ -1,20 +1,13 @@
-import java.util.ArrayList;
-
-
-
-public class MessagePost  extends Post {
+public class MessagePost extends Post {
 	
 
 	private String message;
 
 
-	public MessagePost(String author, String text) {
-		
-		username= author;
-		message = text;
-		timestamp = System.currentTimeMillis();
-		likes = 0;
-		comments = new ArrayList<>();
+	public MessagePost(String username, String message) {
+		 super();
+				this.message = text;
+
 	}
 
 	
@@ -25,5 +18,10 @@ public class MessagePost  extends Post {
 	/**
 	 * Displays details of post
 	 */
+	public void Post() {
+
+		super.display();
+
+	}
 
 }

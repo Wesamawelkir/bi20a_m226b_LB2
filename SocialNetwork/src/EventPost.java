@@ -6,21 +6,11 @@ public class EventPost extends Post {
 
     private int pages;
 
+    public EventPost(String username, String message, long timestamp, int likes, ArrayList<String> comments) {
 
-    public EventPost(String author, String text) {
-
-        username= author;
-        message = text;
-        timestamp = System.currentTimeMillis();
-        likes = 0;
-        comments = new ArrayList<>();
+       super();
+        this.message = text;
     }
-
-
-
-
-
-
     public String getText() {
         return message;
     }
@@ -30,5 +20,9 @@ public class EventPost extends Post {
     /**
      * Displays details of post
      */
+    void Post() {
+
+        super.display();
+    }
 
 }

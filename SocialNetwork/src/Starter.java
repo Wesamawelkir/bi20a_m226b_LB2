@@ -10,7 +10,7 @@ public class Starter {
 		post1.like();
 		post1.like();
 		
-		news.addMessagePost(post1);
+		news.addPost(post1);
 		news.show();
 		
 

@@ -5,8 +5,14 @@ public class Post {
     private String username;
     private long timestamp;
     private int likes;
-    private ArrayList<EventPost> comments;
+    private ArrayList<String> comments;
 
+    public Post(String username, long timestamp, int likes,ArrayList<String> comments){
+        this.username = username;
+        this.timestamp = timestamp;
+        this.likes = likes;
+        this.comments = comments;
+    }
 
     public void like() {
         likes++;
@@ -33,16 +39,17 @@ public class Post {
 
         long current = System.currentTimeMillis();
         long pastMillis = current - timestamp;
-        long seconds = pastMillis/1000;
-        long minutes = seconds/60;
-        long hours = minutes/60;
+        long seconds = pastMillis / 1000;
+        long minutes = seconds / 60;
+        long hours = minutes / 60;
         if (minutes > 0) {
             return minutes + " minutes ago";
-        } else if(hours > 0){
+        } else if (hours > 0) {
             return hours + " hours ago";
         } else {
             return "a few seconds ago";
         }
+    }
         public void display() {
 
             System.out.println("Username " + username);
@@ -61,6 +68,6 @@ public class Post {
             }
         }
     }
-}
+
 
 
