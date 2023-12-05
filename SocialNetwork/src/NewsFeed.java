@@ -1,29 +1,30 @@
 import java.util.ArrayList;
 
 public class NewsFeed {
-	
-	public ArrayList<Post> meineListe = new ArrayList<Post>();
+
+
+	private ArrayList<Post> posts;
+
 
 	public NewsFeed() {
-		
-		messages = new ArrayList<>();
-		photos = new ArrayList<>();
+
+		posts = new ArrayList<>();
 	}
-	
-	
+
+
 	public void addPost(Post post) {
-		meineListe.add(post);
-	}
-	
-	
+		posts.add(post);
+	};
+
+
 	public void show() {
 
-		Post[] Post;
-		for(Post post : Post) {
-			meineListe.display();
+		for(Post post : posts) {
+			post.display();
 			System.out.println();
 		}
-		
+
 	}
 
 }
+
